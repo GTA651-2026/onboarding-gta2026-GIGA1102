@@ -15,13 +15,16 @@ Version / date d'accès : __
 
 *(Si plusieurs outils, dupliquez cette section.)*
 
+**L1**: Aucun
+
+
 ---
 
 ## 2. Ce qu'il m'a aidé à faire
 
 *(Tâche précise — ex. : « structurer la section ROI », pas : « écrire le travail ».)*
 
-__
+**L1**: Aucun
 
 ---
 
@@ -32,6 +35,8 @@ __
 - __
 - __
 
+**L1**: Aucun
+
 ---
 
 ## 4. Ce que j'ai modifié ou rejeté
@@ -40,6 +45,8 @@ __
 
 - __
 - __
+
+**L1**: Aucun
 
 ---
 
@@ -50,3 +57,5 @@ de l'exactitude, de la pertinence et du raisonnement — outil IA utilisé ou no
 
 Nom : __
 Date : __
+
+**L1**: Aucun
