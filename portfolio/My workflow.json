@@ -4,6 +4,7 @@
     {
       "parameters": {
         "options": {
+          "systemMessage": "You are a specialized code AI assistant, your job is to help the users with your inputs. All your answers must be clear and concise.",
           "maxIterations": 5
         }
       },
@@ -71,7 +72,9 @@
     },
     {
       "parameters": {
-        "options": {}
+        "options": {
+          "responseMode": "lastNode"
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.4,
@@ -136,7 +139,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "6e91df91-0b68-4f42-aea3-6b40d0e3e619",
+  "versionId": "3e82e788-b8ac-4437-abb4-72aad369a908",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "379df607e9bda18e984e59c7c35f3324d6ef15d9b93ea344a9ac512c24696b34"
