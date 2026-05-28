@@ -1,6 +1,6 @@
 # Rétroaction automatisée -- S02 (Sélectionner des solutions IA : décision, opérations, productivité)
 
-_Générée le 2026-05-26T14:14:33+00:00 -- Run `20260526T140803Z-ec457158`_
+_Générée le 2026-05-28T17:32:50+00:00 -- Run `20260528T172647Z-afdf4262`_
 
 Ce document est produit par un pipeline reproductible (vérification SQL déterministe + analyse LLM du brief et de la déclaration IA). Une revue humaine précède toujours sa publication. **À ce stade expérimental, aucune note ni étiquette de niveau n'est diffusée : l'objectif est purement formatif.**
 
@@ -13,56 +13,58 @@ La vérification automatique n'a pas pu être réalisée (gate non applicable (t
 
 ## 2. Rétroaction pédagogique sur le brief
 
-> Le rendu est un gabarit complet d'instructions mais il n'inclut aucun contenu rempli ni livrable exécutable; les dimensions modèle, validation et justification exécutive sont absentes. Remplissez la grille avec analyses chiffrées, ajoutez les validations SQL, la recommandation exécutive et la trace de processus pour améliorer la note.
+> Brief clair et complet : les deux contextes sont bien décrits et la grille justifie les scores par critère, conduisant à des recommandations distinctes et solidement motivées. Pour parfaire la soumission, joignez des preuves chiffrées pour une ou deux justifications clés et incluez le contenu d'ai-usage.md ou son résumé.
 
 ### Observations par dimension
 
-**Model quality**
-- Observation : Le document fourni contient une grille et des instructions mais aucun modèle dimensionnel ni schéma détaillé.
-- Piste d'amélioration : Fournir un schéma dimensionnel concret (faits, dimensions, grain) appliqué aux deux contextes avec justification des patterns choisis.
+**Contexte organisationnel**
+- Observation : Le document définit une PME de 50 employés (Lumen Logistique inc., budget IA ~25 K$) et une coopérative de 800 employés (budget IA ~2 M$, contrainte AMF et Loi 25), et explique pourquoi la faisabilité diffère entre elles.
+- Piste d'amélioration : Ajouter un tableau synthétique comparant explicitement taille, budget et maturité IT pour chaque contexte afin de rendre la différenciation encore plus immédiate.
 
-**Validation quality**
-- Observation : Aucune requête SQL de validation, aucun check documenté pour les cas limites n'est présent dans le brief.
-- Piste d'amélioration : Ajouter des requêtes de validation reproduisibles (SQL) montrant que la solution répond à la question, et traiter les cas limites (NULLs, agrégations).
+**Justification criteres**
+- Observation : La grille présente des scores pour impact, faisabilité, coût et risque avec une justification pour chaque agent et chaque contexte (ex. faisabilité Copilot=5 pour PME car M365 déjà déployé).
+- Piste d'amélioration : Inclure une source chiffrée ou une hypothèse vérifiable pour au moins une justification critique (p.ex. estimation du lift de conversion alléguée pour Einstein).
 
-**Executive justification**
-- Observation : Le fichier est un template avec consignes et cases à remplir; il ne contient pas de recommandation décisionnelle pour le CEO.
-- Piste d'amélioration : Rédiger un brief exécutif (150–300 mots) par contexte qui conclut par une recommandation claire et chiffrée en langage d'affaires.
+**Role specialise identifie**
+- Observation : Les rôles métier sont nommés clairement : 'directeur financier que la PME n'a pas', 'directeur commercial ou analyste CRM' et 'adjoint de productivité polyvalent'.
+- Piste d'amélioration : Ajouter un exemple concret d'activité métier (KPI impacté) pour chaque rôle pour renforcer la connexion valeur-métier.
 
-**Process trace**
-- Observation : Le brief demande la mise à jour de `ai-usage.md` mais n'inclut aucune trace de commits ni note IA dans le document fourni.
-- Piste d'amélioration : Inclure l'historique git (≥3 commits significatifs) et une note IA précisant outil, usage et validation humaine.
+**Recommandation argumentee**
+- Observation : La recommandation diffère par contexte: pour la PME privilégier Copilot puis pilote Brex, et pour la grande entreprise déployer Einstein en premier avec mitigations de conformité.
+- Piste d'amélioration : Présenter un petit calendrier de déploiement (phases, critères de succès) pour rendre la recommandation immédiatement actionable devant un comité de direction.
 
-**Reproducibility**
-- Observation : Aucun artefact exécutable ni instructions reproductibles (script DuckDB, chemins, dépendances) n'est fourni.
-- Piste d'amélioration : Fournir un README et un script de vérification exécutable sur un clone propre permettant de reproduire les résultats en <5 minutes.
-
-_Quelques points appellent une attention particulière lors de la prochaine itération : brief_incomplet._
+**Ai disclosure**
+- Observation : Le brief indique que 'ai-usage.md mis à jour à la racine du dépôt' mais le contenu détaillé de ce fichier n'est pas présent dans le brief lui-même.
+- Piste d'amélioration : Joindre ou résumer le contenu d'ai-usage.md (outils, étape d'utilisation, validation humaine, limites) pour atteindre le niveau excellent.
 
 ## 3. Déclaration d'utilisation de l'IA
 
-> L'étudiant a clairement déclaré qu'aucun outil d'IA n'a été utilisé pour ce livrable. La déclaration est complète et conforme aux exigences du cours.
+> La déclaration précise l'outil utilisé et décrit clairement à quelles étapes il a aidé, ainsi que les vérifications de sources effectuées. Il manque toutefois une indication explicite du modèle/version utilisé et une mention claire des limites ou erreurs observées dans les sorties générées.
 
 **Sujets bien couverts dans votre déclaration :**
 
-- outils utilisés (nom + version/modèle)
 - à quelle étape l'IA a été utilisée
 - comment la sortie a été validée par l'humain
+
+**Sujets à ajouter ou expliciter pour la prochaine itération :**
+
+- outils utilisés (nom + version/modèle)
 - limites ou erreurs observées
 
 ## 4. Pistes d'action pour la prochaine itération
 
-- Réviser le brief en tenant compte des observations par dimension de la section 2.
+- Compléter `ai-usage.md` en y ajoutant : outils utilisés (nom + version/modèle).
+- Compléter `ai-usage.md` en y ajoutant : limites ou erreurs observées.
 
 ---
 
 ## 5. Traçabilité
 
-- **Run ID :** `20260526T140803Z-ec457158`
+- **Run ID :** `20260528T172647Z-afdf4262`
 - **Devoir :** `S02`
 - **Étudiant·e :** `GIGA1102`
-- **Commit analysé :** `c945d6d`
-- **Audit (côté instructeur) :** `tools/instructor/feedback_pipeline/audit/20260526T140803Z-ec457158/GIGA1102/`
+- **Commit analysé :** `5546696`
+- **Audit (côté instructeur) :** `tools/instructor/feedback_pipeline/audit/20260528T172647Z-afdf4262/GIGA1102/`
 - **Prompts (SHA-256) :**
   - `rubric_grader_system` : `505f32d1d8319d66...`
   - `ai_usage_grader_system` : `81cb7fdf89bda55a...`
